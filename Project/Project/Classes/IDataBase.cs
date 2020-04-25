@@ -8,7 +8,7 @@ namespace Project.Classes
 {
     public interface IDataBase
     {
-        void add(AbstractInformation information);
-        void addAll(ICollection<AbstractInformation> collection);
+        void add(Information information);
+        void addAll(ICollection<Information> collection);
     }
 }

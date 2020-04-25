@@ -8,21 +8,29 @@ namespace Project.Classes
 {
     public class Patient
     {
-        AbstractInformation information;
+        Information information;
+        private List<Analys> list;
 
         private Patient()
         {
 
         }
 
-        public Patient(AbstractInformation information)
+        public Patient(Information information)
         {
-            this.information = information;   
+            this.information = information;
+            list = new List<Analys>();
         }
 
-        public AbstractInformation getInformation()
+        public Information getInformation()
         {
             return information;
+        }
+
+        public void addAnalys(Analys analys)
+        {
+            list.Add(analys);
+            if (analys.lastSurvey > information.lastSurvey) information.lastSurvey = analys.lastSurvey;
         }
     }
 }

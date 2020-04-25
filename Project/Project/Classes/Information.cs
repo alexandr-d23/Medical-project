@@ -6,33 +6,35 @@ using System.Threading.Tasks;
 
 namespace Project.Classes
 {
-    public class Information
-    {
-        private string fName { get; set; }
-        private string lName { get; set; }
-        private string patronymic { get; set; }
-        private Boolean gender { get; set; }
-        private DateTime birthday { get; set; }
-        private string sitizenShip { get; set; }
-        private string passportData { get; set; }
-        private string attachment { get; set; }
-        private DateTime lastSurvey { get; set; }
+    public class Information  
+    {   
+        public string fName { get; set; }
+        public string lName { get; set; }
+        public string patronymic { get; set; }
+        public Boolean gender { get; set; }
+        public DateTime birthday { get; set; }
+        public string sitizenShip { get; set; }
+        public string passportData { get; set; }
+        public string insurancePolicy { get; set; }
+        public string attachment { get; set; }
+        public DateTime lastSurvey { get; set; }
 
         private Information()
         {
 
         }
 
-        public Information(string fName, string lName, string patronymic, DateTime birthday, string sitizenShip, string passportData, string attachment, DateTime lastSurvey)
+        public Information(string fName, string lName, string patronymic, Boolean gender, DateTime birthday, string sitizenShip, string passportData, string insurancePolicy, string attachment)
         {
             this.fName = fName;
             this.lName = lName;
             this.patronymic = patronymic;
+            this.gender = gender;
             this.birthday = birthday;
             this.sitizenShip = sitizenShip;
             this.passportData = passportData;
+            this.insurancePolicy = insurancePolicy;
             this.attachment = attachment;
-            this.lastSurvey = lastSurvey;
         }
 
     }

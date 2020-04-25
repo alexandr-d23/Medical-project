@@ -47,9 +47,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\AbstractPatient.cs" />
-    <Compile Include="Classes\AbstractInformation.cs" />
+    <Compile Include="Classes\Analys.cs" />
     <Compile Include="Classes\Patient.cs" />
     <Compile Include="Classes\Information.cs" />
+    <Compile Include="AddPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include=".Designer.cs">
+      <DependentUpon>AddPatient.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,11 +71,11 @@
       <DependentUpon>Analysis.cs</DependentUpon>
     </Compile>
     <Compile Include="Interface2.cs" />
-    <Compile Include="Profile.cs">
+    <Compile Include="ProfileInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Profile.Designer.cs">
-      <DependentUpon>Profile.cs</DependentUpon>
+    <Compile Include="ProfileInfo.Designer.cs">
+      <DependentUpon>ProfileInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -78,8 +85,11 @@
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Profile.resx">
-      <DependentUpon>Profile.cs</DependentUpon>
+    <EmbeddedResource Include="AddPatient.resx">
+      <DependentUpon>AddPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfileInfo.resx">
+      <DependentUpon>ProfileInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

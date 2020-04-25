@@ -8,6 +8,6 @@ namespace Project.Classes
 {
     public abstract class AbstractPatient
     {
-        public abstract AbstractInformation getInformation();
+        public abstract Information getInformation();
     }
 }

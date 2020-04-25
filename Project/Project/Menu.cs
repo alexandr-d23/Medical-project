@@ -20,8 +20,20 @@ namespace Project
         {
             InitializeComponent();
             list = new List<Patient>();
+        }
+
+        public void addPatient(Patient p)
+        {
+            list.Add(p);
+            Information inf = (Information)p.getInformation();
+            String lastS = inf.lastSurvey.ToShortDateString().Equals("01.01.0001") ? "-" : inf.lastSurvey.ToShortDateString();
+            dataGridView1.Rows.Add(inf.fName,inf.lName,inf.patronymic,inf.sitizenShip,inf.attachment,lastS);
+            if(dataGridView1.Rows.Count==1)dataGridView1.ClearSelection();
+            /*
+            var l= from inf in list select inf.getInformation();
+            dataGridView1.DataSource = from inf in list select (Information)inf.getInformation();
+            */
             
-            dataGridView1.DataSource = list;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -29,32 +41,54 @@ namespace Project
 
         }
 
-        private void addAnalysisButton_Click(object sender, EventArgs e)
-        {
-            Information info=null;
-            Analysis form = new Analysis(info);
-            form.Show();
-        }
-
         private void addPatientButton_Click(object sender, EventArgs e)
         {
-            Profile form1 = new Profile();
+            Profile form1 = new Profile(this);
             form1.Show();
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        /* Profile form1 = new Profile(this);
+            form1.Show();
+            */
 
         private void PatientListButton_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {   if (e.RowIndex<0) return;
+            ProfileInfo form = new ProfileInfo(list[dataGridView1.CurrentRow.Index]);
+            form.Show();
+        }
+
+        private void addAnalysButton_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Выберите пациента");
+                return;
+            }
+            Analysis form = new Analysis(list[dataGridView1.CurrentRow.Index]);
+            form.Show();
+        }
+
+        public void reload()
+        {
+            dataGridView1.Rows.Clear();
+            foreach(Patient p in list){
+                Information inf = (Information)p.getInformation();
+                String lastS = inf.lastSurvey.ToShortDateString().Equals("01.01.0001") ? "-" : inf.lastSurvey.ToShortDateString();
+                dataGridView1.Rows.Add(inf.fName, inf.lName, inf.patronymic, inf.sitizenShip, inf.attachment, lastS);
+                if (dataGridView1.Rows.Count == 1) dataGridView1.ClearSelection();
+            }
 
         }
+
+        private void PatientListButton_Click_1(object sender, EventArgs e)
+        {
+            reload();
+        }
     }
+    
 }

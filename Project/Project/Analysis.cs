@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,11 @@ namespace Project
 {
     public partial class Analysis : Form
     {
-        private Classes.Information info;
-        public Analysis(Classes.Information info)
+        public ProfileInfo owner;
+        private Patient patient;
+        public Analysis(Patient patient)
         {
-            this.info = info;
+            this.patient = patient;
             InitializeComponent();
         }
 
@@ -24,5 +26,18 @@ namespace Project
 
         }
 
+        private void label23_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addAnalysis_Click(object sender, EventArgs e)
+        {
+            String[] b = maskedTextBox1.Text.Split('.');
+            DateTime lastSurvey = new DateTime(Convert.ToInt32(b[2]), Convert.ToInt32(b[1]), Convert.ToInt32(b[0]));
+            patient.addAnalys(new Classes.Analys(lastSurvey));
+            if (owner != null) owner.changeLastSurvey();
+            this.Close();
+        }
     }
 }
