@@ -18,6 +18,7 @@ namespace Project
         {
             InitializeComponent();
             this.patient = patient;
+            
         }
 
         private void ProfileInfo_Load(object sender, EventArgs e)

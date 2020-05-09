@@ -33,7 +33,6 @@ namespace Project
             textBox4.Text = "РФ";
             maskedTextBox2.Text = "1234-123456";
             textBox5.Text = "New";
-          
         }
 
         private void Save_Click(object sender, EventArgs e)
@@ -41,8 +40,8 @@ namespace Project
             string fName = textBox1.Text;
             string lName = textBox2.Text;
             string patronymic = textBox3.Text;
-            Boolean gender = comboBox1.Text=="Мужской" ? true : false;
-            String[] b = maskedTextBox1.Text.Split('.');
+            bool gender = comboBox1.Text=="Мужской" ? true : false;
+            string[] b = maskedTextBox1.Text.Split('.');
             DateTime birthday = new DateTime(Convert.ToInt32(b[2]), Convert.ToInt32(b[1]), Convert.ToInt32(b[0]));
             string sitizenShip = textBox4.Text;
             string passportData = maskedTextBox2.Text;
