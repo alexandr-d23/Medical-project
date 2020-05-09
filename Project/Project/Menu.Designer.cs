@@ -33,17 +33,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.PatientListButton = new System.Windows.Forms.Button();
-            this.addAnalysButton = new System.Windows.Forms.Button();
-            this.addPatientButton = new System.Windows.Forms.Button();
             this.PatienName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Patronymic = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sitizenShip = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passportData = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastSurvey = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.PatientListButton = new System.Windows.Forms.Button();
+            this.addAnalysButton = new System.Windows.Forms.Button();
+            this.addPatientButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -102,69 +102,8 @@
             this.dataGridView1.Size = new System.Drawing.Size(949, 549);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1161, 83);
-            this.panel1.TabIndex = 5;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("SimSun", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.PapayaWhip;
-            this.label1.Location = new System.Drawing.Point(21, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(212, 48);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Project ";
-            // 
-            // PatientListButton
-            // 
-            this.PatientListButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.PatientListButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PatientListButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PatientListButton.ForeColor = System.Drawing.Color.FloralWhite;
-            this.PatientListButton.Location = new System.Drawing.Point(23, 133);
-            this.PatientListButton.Name = "PatientListButton";
-            this.PatientListButton.Size = new System.Drawing.Size(138, 56);
-            this.PatientListButton.TabIndex = 6;
-            this.PatientListButton.Text = "Обновить список";
-            this.PatientListButton.UseVisualStyleBackColor = false;
-            this.PatientListButton.Click += new System.EventHandler(this.PatientListButton_Click_1);
-            // 
-            // addAnalysButton
-            // 
-            this.addAnalysButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.addAnalysButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.addAnalysButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addAnalysButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addAnalysButton.ForeColor = System.Drawing.Color.FloralWhite;
-            this.addAnalysButton.Location = new System.Drawing.Point(23, 336);
-            this.addAnalysButton.Name = "addAnalysButton";
-            this.addAnalysButton.Size = new System.Drawing.Size(138, 56);
-            this.addAnalysButton.TabIndex = 7;
-            this.addAnalysButton.Text = "Добавить анализ";
-            this.addAnalysButton.UseVisualStyleBackColor = false;
-            this.addAnalysButton.Click += new System.EventHandler(this.addAnalysButton_Click);
-            // 
-            // addPatientButton
-            // 
-            this.addPatientButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.addPatientButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addPatientButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addPatientButton.ForeColor = System.Drawing.Color.FloralWhite;
-            this.addPatientButton.Location = new System.Drawing.Point(23, 235);
-            this.addPatientButton.Name = "addPatientButton";
-            this.addPatientButton.Size = new System.Drawing.Size(138, 56);
-            this.addPatientButton.TabIndex = 8;
-            this.addPatientButton.Text = "Добавить пациента";
-            this.addPatientButton.UseVisualStyleBackColor = false;
-            this.addPatientButton.Click += new System.EventHandler(this.addPatientButton_Click);
+            this.dataGridView1.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataGridView1_RowsAdded);
+            this.dataGridView1.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dataGridView1_RowsRemoved);
             // 
             // PatienName
             // 
@@ -220,6 +159,70 @@
             this.lastSurvey.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.lastSurvey.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.lastSurvey.Width = 135;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1161, 83);
+            this.panel1.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("SimSun", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.PapayaWhip;
+            this.label1.Location = new System.Drawing.Point(21, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(212, 48);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Project ";
+            // 
+            // PatientListButton
+            // 
+            this.PatientListButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.PatientListButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PatientListButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PatientListButton.ForeColor = System.Drawing.Color.FloralWhite;
+            this.PatientListButton.Location = new System.Drawing.Point(23, 133);
+            this.PatientListButton.Name = "PatientListButton";
+            this.PatientListButton.Size = new System.Drawing.Size(138, 56);
+            this.PatientListButton.TabIndex = 6;
+            this.PatientListButton.Text = "Обновить список";
+            this.PatientListButton.UseVisualStyleBackColor = false;
+            this.PatientListButton.Click += new System.EventHandler(this.PatientListButton_Click_1);
+            // 
+            // addAnalysButton
+            // 
+            this.addAnalysButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.addAnalysButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.addAnalysButton.Enabled = false;
+            this.addAnalysButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addAnalysButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addAnalysButton.ForeColor = System.Drawing.Color.FloralWhite;
+            this.addAnalysButton.Location = new System.Drawing.Point(23, 336);
+            this.addAnalysButton.Name = "addAnalysButton";
+            this.addAnalysButton.Size = new System.Drawing.Size(138, 56);
+            this.addAnalysButton.TabIndex = 7;
+            this.addAnalysButton.Text = "Добавить анализ";
+            this.addAnalysButton.UseVisualStyleBackColor = false;
+            this.addAnalysButton.Click += new System.EventHandler(this.addAnalysButton_Click);
+            // 
+            // addPatientButton
+            // 
+            this.addPatientButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.addPatientButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addPatientButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addPatientButton.ForeColor = System.Drawing.Color.FloralWhite;
+            this.addPatientButton.Location = new System.Drawing.Point(23, 235);
+            this.addPatientButton.Name = "addPatientButton";
+            this.addPatientButton.Size = new System.Drawing.Size(138, 56);
+            this.addPatientButton.TabIndex = 8;
+            this.addPatientButton.Text = "Добавить пациента";
+            this.addPatientButton.UseVisualStyleBackColor = false;
+            this.addPatientButton.Click += new System.EventHandler(this.addPatientButton_Click);
             // 
             // Menu
             // 

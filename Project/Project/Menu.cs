@@ -89,6 +89,18 @@ namespace Project
         {
             reload();
         }
+
+       
+
+        private void dataGridView1_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            if (dataGridView1.Rows.Count > 0) addAnalysButton.Enabled = true;
+        }
+
+        private void dataGridView1_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+            if (dataGridView1.Rows.Count == 0) addAnalysButton.Enabled = false;
+        }
     }
     
 }
