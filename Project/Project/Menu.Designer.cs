@@ -53,7 +53,7 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FloralWhite;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -76,13 +76,14 @@
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Aquamarine;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Lavender;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridView1.Location = new System.Drawing.Point(200, 89);
+            this.dataGridView1.Location = new System.Drawing.Point(267, 110);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -94,12 +95,13 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowTemplate.Height = 40;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(949, 549);
+            this.dataGridView1.Size = new System.Drawing.Size(1265, 676);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             this.dataGridView1.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataGridView1_RowsAdded);
@@ -118,6 +120,7 @@
             // fName
             // 
             this.fName.HeaderText = "Фамилия";
+            this.fName.MinimumWidth = 6;
             this.fName.Name = "fName";
             this.fName.ReadOnly = true;
             this.fName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -127,6 +130,7 @@
             // Patronymic
             // 
             this.Patronymic.HeaderText = "Отчество";
+            this.Patronymic.MinimumWidth = 6;
             this.Patronymic.Name = "Patronymic";
             this.Patronymic.ReadOnly = true;
             this.Patronymic.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -136,6 +140,7 @@
             // sitizenShip
             // 
             this.sitizenShip.HeaderText = "Гражданство";
+            this.sitizenShip.MinimumWidth = 6;
             this.sitizenShip.Name = "sitizenShip";
             this.sitizenShip.ReadOnly = true;
             this.sitizenShip.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -145,6 +150,7 @@
             // passportData
             // 
             this.passportData.HeaderText = "Прикрепление";
+            this.passportData.MinimumWidth = 6;
             this.passportData.Name = "passportData";
             this.passportData.ReadOnly = true;
             this.passportData.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -154,6 +160,7 @@
             // lastSurvey
             // 
             this.lastSurvey.HeaderText = "Дата обследования";
+            this.lastSurvey.MinimumWidth = 6;
             this.lastSurvey.Name = "lastSurvey";
             this.lastSurvey.ReadOnly = true;
             this.lastSurvey.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -165,8 +172,9 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1161, 83);
+            this.panel1.Size = new System.Drawing.Size(1548, 102);
             this.panel1.TabIndex = 5;
             // 
             // label1
@@ -174,9 +182,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("SimSun", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.PapayaWhip;
-            this.label1.Location = new System.Drawing.Point(21, 15);
+            this.label1.Location = new System.Drawing.Point(28, 18);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(212, 48);
+            this.label1.Size = new System.Drawing.Size(265, 60);
             this.label1.TabIndex = 0;
             this.label1.Text = "Project ";
             // 
@@ -186,9 +195,10 @@
             this.PatientListButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PatientListButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PatientListButton.ForeColor = System.Drawing.Color.FloralWhite;
-            this.PatientListButton.Location = new System.Drawing.Point(23, 133);
+            this.PatientListButton.Location = new System.Drawing.Point(31, 164);
+            this.PatientListButton.Margin = new System.Windows.Forms.Padding(4);
             this.PatientListButton.Name = "PatientListButton";
-            this.PatientListButton.Size = new System.Drawing.Size(138, 56);
+            this.PatientListButton.Size = new System.Drawing.Size(184, 69);
             this.PatientListButton.TabIndex = 6;
             this.PatientListButton.Text = "Обновить список";
             this.PatientListButton.UseVisualStyleBackColor = false;
@@ -202,9 +212,10 @@
             this.addAnalysButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addAnalysButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addAnalysButton.ForeColor = System.Drawing.Color.FloralWhite;
-            this.addAnalysButton.Location = new System.Drawing.Point(23, 336);
+            this.addAnalysButton.Location = new System.Drawing.Point(31, 414);
+            this.addAnalysButton.Margin = new System.Windows.Forms.Padding(4);
             this.addAnalysButton.Name = "addAnalysButton";
-            this.addAnalysButton.Size = new System.Drawing.Size(138, 56);
+            this.addAnalysButton.Size = new System.Drawing.Size(184, 69);
             this.addAnalysButton.TabIndex = 7;
             this.addAnalysButton.Text = "Добавить анализ";
             this.addAnalysButton.UseVisualStyleBackColor = false;
@@ -216,9 +227,10 @@
             this.addPatientButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addPatientButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addPatientButton.ForeColor = System.Drawing.Color.FloralWhite;
-            this.addPatientButton.Location = new System.Drawing.Point(23, 235);
+            this.addPatientButton.Location = new System.Drawing.Point(31, 289);
+            this.addPatientButton.Margin = new System.Windows.Forms.Padding(4);
             this.addPatientButton.Name = "addPatientButton";
-            this.addPatientButton.Size = new System.Drawing.Size(138, 56);
+            this.addPatientButton.Size = new System.Drawing.Size(184, 69);
             this.addPatientButton.TabIndex = 8;
             this.addPatientButton.Text = "Добавить пациента";
             this.addPatientButton.UseVisualStyleBackColor = false;
@@ -226,15 +238,16 @@
             // 
             // Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(1161, 648);
+            this.ClientSize = new System.Drawing.Size(1548, 798);
             this.Controls.Add(this.addPatientButton);
             this.Controls.Add(this.addAnalysButton);
             this.Controls.Add(this.PatientListButton);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Menu";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;

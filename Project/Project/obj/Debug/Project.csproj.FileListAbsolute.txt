@@ -36,3 +36,16 @@ C:\Users\Alex\Documents\GitHub\Medical-project\Project\Project\obj\Debug\Project
 C:\Users\Alex\Documents\GitHub\Medical-project\Project\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
 C:\Users\Alex\Documents\GitHub\Medical-project\Project\Project\obj\Debug\Project.exe
 C:\Users\Alex\Documents\GitHub\Medical-project\Project\Project\obj\Debug\Project.pdb
+C:\Users\black\Desktop\Medical-project\Project\Project\bin\Debug\Project.exe.config
+C:\Users\black\Desktop\Medical-project\Project\Project\bin\Debug\Project.exe
+C:\Users\black\Desktop\Medical-project\Project\Project\bin\Debug\Project.pdb
+C:\Users\black\Desktop\Medical-project\Project\Project\obj\Debug\Project.csprojAssemblyReference.cache
+C:\Users\black\Desktop\Medical-project\Project\Project\obj\Debug\Project.Analysis.resources
+C:\Users\black\Desktop\Medical-project\Project\Project\obj\Debug\Project.Menu.resources
+C:\Users\black\Desktop\Medical-project\Project\Project\obj\Debug\Project.Profile.resources
+C:\Users\black\Desktop\Medical-project\Project\Project\obj\Debug\Project.ProfileInfo.resources
+C:\Users\black\Desktop\Medical-project\Project\Project\obj\Debug\Project.Properties.Resources.resources
+C:\Users\black\Desktop\Medical-project\Project\Project\obj\Debug\Project.csproj.GenerateResource.cache
+C:\Users\black\Desktop\Medical-project\Project\Project\obj\Debug\Project.exe
+C:\Users\black\Desktop\Medical-project\Project\Project\obj\Debug\Project.pdb
+C:\Users\black\Desktop\Medical-project\Project\Project\obj\Debug\Project.Form1.resources
