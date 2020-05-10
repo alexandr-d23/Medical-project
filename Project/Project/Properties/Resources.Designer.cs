@@ -63,36 +63,6 @@ namespace Project.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap loupe_79257 {
-            get {
-                object obj = ResourceManager.GetObject("loupe_79257", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap loupe_792571 {
-            get {
-                object obj = ResourceManager.GetObject("loupe_792571", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap loupe_792572 {
-            get {
-                object obj = ResourceManager.GetObject("loupe_792572", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap loupe_792573 {
             get {
                 object obj = ResourceManager.GetObject("loupe_792573", resourceCulture);

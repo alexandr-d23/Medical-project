@@ -56,7 +56,11 @@ namespace Project
 
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {   if (e.RowIndex<0) return;
+        {   if (e.RowIndex < 0)
+            {
+                dataGridView1.ClearSelection();
+                return;
+            }
             ProfileInfo form = new ProfileInfo(list[Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value)]);
             form.Show();
         }
@@ -100,6 +104,7 @@ namespace Project
             {
                 addAnalysButton.Enabled = true;
                 delete.Enabled = true;
+                openProfile.Enabled = true;
             }
         }
 
@@ -109,6 +114,7 @@ namespace Project
             {
                 addAnalysButton.Enabled = false;
                 delete.Enabled = false;
+                openProfile.Enabled = false;
             }
 
         }
@@ -120,12 +126,24 @@ namespace Project
                 MessageBox.Show("Выберите пациента для удаления");
                 return;
             }
-            list.RemoveAt(Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value));
-            reload();
+            DialogResult dr = MessageBox.Show("Вы уверены,что хотите удалить пациента?",
+                      "Dialog", MessageBoxButtons.YesNo);
+            switch (dr)
+            {
+                case DialogResult.Yes:
+                    list.RemoveAt(Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value));
+                    reload();
+                    break;
+                case DialogResult.No:
+                    break;
+            }
+            
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {   if(richTextBox1.Text == String.Empty || richTextBox1.Text == "Имя Фамилия" && richTextBox1.ForeColor == Color.DarkGray)
+        {
+            dataGridView1.ClearSelection();
+            if (richTextBox1.Text == String.Empty || richTextBox1.Text == "Имя Фамилия" && richTextBox1.ForeColor == Color.DarkGray)
             {
                 for (int i = 0; i < dataGridView1.Rows.Count; i++)
                 {
@@ -167,6 +185,17 @@ namespace Project
                 richTextBox1.ForeColor = Color.DarkGray;
                 richTextBox1.Text = "Имя Фамилия";
             }
+        }
+
+        private void openProfile_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Выберите пациента");
+                return;
+            }
+            ProfileInfo form = new ProfileInfo(list[Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value)]);
+            form.Show();
         }
     }
     
