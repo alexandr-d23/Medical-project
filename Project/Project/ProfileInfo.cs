@@ -55,7 +55,7 @@ namespace Project
         private void show_Click(object sender, EventArgs e)
         {   if (show.Text == "показать")
             {
-                Form1 form = new Form1(this);
+                Captcha form = new Captcha(this);
                 form.Show();
             }
             else
@@ -409,6 +409,13 @@ namespace Project
         private void button1_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void AnalysInfo_Click(object sender, EventArgs e)
+        {
+            InfoAnalys info = new InfoAnalys();
+            info.Show();
+
         }
     }
 }

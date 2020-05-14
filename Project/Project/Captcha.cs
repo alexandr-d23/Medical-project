@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace Project
 {
-    public partial class Form1 : Form
+    public partial class Captcha : Form
     {
         private ProfileInfo owner;
         private String text;
-        public Form1(ProfileInfo owner)
+        public Captcha(ProfileInfo owner)
         {
             InitializeComponent();
             this.owner = owner;
