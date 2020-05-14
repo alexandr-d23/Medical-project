@@ -102,12 +102,10 @@ namespace Project
             {
                 MessageBox.Show("Неверно, попробуйте еще раз");
                 pictureBox1.Image = this.Capcha(pictureBox1.Width, pictureBox1.Height);
+                richTextBox1.Text = "";
             }
         }
 
-        private void richTextBox1_TextChanged (Object sender, EventArgs e) 
-        {
-           
-        }
+       
     }
 }

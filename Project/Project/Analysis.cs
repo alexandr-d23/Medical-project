@@ -35,9 +35,11 @@ namespace Project
         {
             String[] b = maskedTextBox1.Text.Split('.');
             DateTime lastSurvey = new DateTime(Convert.ToInt32(b[2]), Convert.ToInt32(b[1]), Convert.ToInt32(b[0]));
-            patient.addAnalys(new Classes.Analys(lastSurvey));
+            patient.addAnalys(new Analys(lastSurvey));
             if (owner != null) owner.changeLastSurvey();
             this.Close();
+
+
         }
     }
 }
